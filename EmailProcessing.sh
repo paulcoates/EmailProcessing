@@ -1,9 +1,9 @@
 #!/bin/bash
-SOURCE_DIR=/media/filingcabinet/Unsorted/
-#SOURCE_DIR=/media/filingcabinet/Unsorted/*.pdf
+#SOURCE_DIR=/media/filingcabinet/Unsorted/
+SOURCE_DIR=/media/filingcabinet/Unsorted/*.pdf
 SOURCE_FILES=$SOURCE_DIR/*.pdf
-OUTPUT_DIR=/media/filingcabinet/Intray/
-#OUTPUT_DIR=/filingcabinet/Intray/
+#OUTPUT_DIR=/media/filingcabinet/Intray/
+OUTPUT_DIR=/filingcabinet/Intray/
 
 shopt -s nullglob  #This is required otherwise it will resolve *.pdf to "*.pdf" when no files.
 

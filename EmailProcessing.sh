@@ -29,10 +29,10 @@ for f in $SOURCE_FILES; do
     then
       #/usr/local/rvm/rubies/default/bin/ruby /home/pdfocr.rb -i "$f" -o "$OUTPUT_FILE"
       sh /home/OCRmyPDF/OCRmyPDF.sh -d -c -o 300 -f "$f" "$OUTPUT_FILE"
-      rm -rf $f
+      rm -rf "$f"
     else
-      cp $f $OUTPUT_FILE
-      rm -rf $f 
+      cp "$f" "$OUTPUT_FILE"
+      rm -rf "$f" 
     fi
   done
 

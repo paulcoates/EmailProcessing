@@ -1,9 +1,7 @@
 #/bin/bash
-SOURCE_DIR=/filingcabinet/Unsorted/
-#SOURCE_DIR=/media/filingcabinet/Unsorted/*.pdf
-SOURCE_FILES=$SOURCE_DIR/*.pdf
-#OUTPUT_DIR=/media/filingcabinet/Intray/
-OUTPUT_DIR=/filingcabinet/Intray/
+SOURCE_DIR=/media/filingcabinet/Unsorted/
+SOURCE_FILES=$SOURCE_DIR*.pdf
+OUTPUT_DIR=/media/filingcabinet/Intray/
 
 shopt -s nullglob  #This is required otherwise it will resolve *.pdf to "*.pdf" when no files.
 
@@ -29,7 +27,8 @@ for f in $SOURCE_FILE; do
   STRING=$(strings "$f" | grep FontName) 
     if [ -z "$STRING" ]
     then
-      /usr/local/rvm/rubies/default/bin/ruby /home/pdfocr.rb -i "$f" -o "$OUTPUT_FILE"
+      #/usr/local/rvm/rubies/default/bin/ruby /home/pdfocr.rb -i "$f" -o "$OUTPUT_FILE"
+      sh /home/OCRmyPDF/OCRmyPDF.sh -d -c -o 300 -f "$f" "$OUTPUT_FILE"
       rm -rf $f
     else
       cp $f $OUTPUT_FILE

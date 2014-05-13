@@ -5,7 +5,7 @@ OUTPUT_DIR=/media/filingcabinet/Intray/
 
 shopt -s nullglob  #This is required otherwise it will resolve *.pdf to "*.pdf" when no files.
 
-for f in $SOURCE_FILE; do
+for f in $SOURCE_FILES; do
 
 ### TO DO LIST
 ## Start using inotify-tools and have this script run as a daemon.

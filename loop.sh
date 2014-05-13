@@ -3,6 +3,6 @@
 # Check for processing every 30s
 
 while true; do
-  /home/EmailProcessing.sh
+  /bin/bash ./EmailProcessing.sh
   sleep $1 
 done

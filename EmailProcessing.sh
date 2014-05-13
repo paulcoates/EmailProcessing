@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 SOURCE_DIR=/filingcabinet/Unsorted/
 #SOURCE_DIR=/media/filingcabinet/Unsorted/*.pdf
 SOURCE_FILES=$SOURCE_DIR/*.pdf
